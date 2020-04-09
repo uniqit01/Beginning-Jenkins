@@ -10,6 +10,7 @@ node {
            sh 'apk add make python'
         }
         stage("Install Requirements") {
+            sh 'python -m virtualenv venv'
             sh 'make install'
         }
 
