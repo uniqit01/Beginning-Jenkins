@@ -6,6 +6,9 @@ node {
     }
 
     dir('Lesson5/ActivityA') {
+        stage("setup") {
+           sh 'apk add make python pip'
+        }
         stage("Install Requirements") {
             sh 'make install'
         }
